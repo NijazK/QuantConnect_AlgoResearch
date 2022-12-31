@@ -19,8 +19,8 @@ class UniverseSelectionRegressionAlgorithm(QCAlgorithm):
 
         self.UniverseSettings.Resolution = Resolution.Daily
         self.AddUniverse(self.CoarseSelectionFunction)
-
-        self.delistedSymbols = []
+        
+        self.changedSymbols = []
         self.changes = None
 
 
@@ -34,7 +34,7 @@ class UniverseSelectionRegressionAlgorithm(QCAlgorithm):
             self.MarketOrder("IEFA", 30)
 
         for kvp in data.Delistings:
-            self.delistedSymbols.append(kvp.Key)
+            self.changedSymbols.append(kvp.Key)
         
         if self.changes is None:
             return
@@ -48,7 +48,7 @@ class UniverseSelectionRegressionAlgorithm(QCAlgorithm):
 
         for security in self.changes.RemovedSecurities:
             self.Log("{0}: Removed Security: {1}".format(self.Time, security.Symbol))
-            if security.Symbol not in self.delistedSymbols:
+            if security.Symbol not in self.changedSymbols:
                 self.Log("Not in delisted: {0}:".format(security.Symbol))
                 self.MarketOnOpenOrder(security.Symbol, -100)
 
