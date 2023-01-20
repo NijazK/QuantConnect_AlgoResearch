@@ -1,7 +1,8 @@
 from AlgorithmImports import *
 
 ### <summary>
-### This algorithm demonstrates the runtime addition and removal of securities from your algorithm.
+### This algorithm demonstrates the runtime addition and removal of equities with a quarterly time frame.
+### This strategy is implemented with the thought of cyclicals that will mean revert above standard deviation.
 ### With LEAN it is possible to add and remove securities after the initialization.
 ### </summary>
 ### <meta name="tag" content="using data" />
