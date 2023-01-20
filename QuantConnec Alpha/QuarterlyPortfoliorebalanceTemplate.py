@@ -57,7 +57,7 @@ class AddRemoveSecurityRegressionAlgorithm(QCAlgorithm):
             self.AddEquity("HSY")
             self._lastAction = self.Time
         
-        if self.Time.weekday() == 8:
+        if self.Time.weekday() == 12:
             self.RemoveSecurity("NVO")
             self.RemoveSecurity("MSFT")
             self.RemoveSecurity("ABNB")
