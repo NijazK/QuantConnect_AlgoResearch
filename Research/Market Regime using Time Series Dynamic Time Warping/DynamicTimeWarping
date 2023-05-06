@@ -1,0 +1,11 @@
+
+Hierarchical Clustering = Determines cluster assignments by building a hierarchy. This is implemented by either a bottom-up or a top-down approach:
+
+	* SPY 
+	* Treasuries
+	* Impacted Assets
+	* Commodity Assets
+
+Divisive Clustering = Top down approach that starts with SP 500 index and breaks into smaller clusters to resemble relationships of magnitude. Avoids bias because data objects do have relationships because it starts with bigger clusters and breaks off into separate vectors, or clusters.
+
+Unsupervised Learning Algorithms and design patterns to take input from untagged data (settlement prices, P/E ratios, magnitudes) through mimicry build a sustainable model for pricing market regimes.
